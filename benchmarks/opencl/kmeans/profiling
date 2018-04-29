@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in `seq 1 5`
+do
+    time ./kmeans -o -i ../../data/kmeans/inpuGen/1000000_34.txt
+done

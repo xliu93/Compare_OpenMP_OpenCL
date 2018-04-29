@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for SIZE in 256 1024 2048 4096 8192
+do
+    #/usr/bin/time -v ./lud -s $SIZE
+    valgrind ./lud -s $SIZE
+done

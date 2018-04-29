@@ -1,0 +1,8 @@
+#!/bin/bash
+NUM_THREAD=4
+
+for i in `seq 1 5`
+do
+    i#./omp/lud_omp -n $NUM_THREAD -i ../../data/lud/64.dat
+    time ./omp/lud_omp -s 8192
+done

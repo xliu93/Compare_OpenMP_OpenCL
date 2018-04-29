@@ -1,0 +1,8 @@
+#/bin/bash
+SIZE=1048576
+for i in `seq 1 5`
+do
+    valgrind ./backprop $SIZE          # total heap allocated
+    #/usr/bin/time -v ./backprop $SIZE  # maximum resident size
+    #time ./backprop $SIZE              # timing 
+done

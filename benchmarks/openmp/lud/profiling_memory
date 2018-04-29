@@ -1,0 +1,8 @@
+#!/bin/bash
+NUM_THREAD=4
+
+for SIZE in 256 1024 2048 4096 8192
+do
+    #/usr/bin/time -v ./omp/lud_omp -s $SIZE
+    valgrind ./omp/lud_omp -s $SIZE
+done

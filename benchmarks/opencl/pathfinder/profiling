@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in `seq 1 5`
+do
+    time ./pathfinder 100000 500 20 >result.txt
+done

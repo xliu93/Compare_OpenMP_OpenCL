@@ -5,7 +5,7 @@ A simple work comparing the parallel computation models OpenMP and OpenCL.
 #### Benchmark: 6 applications chosen from Rodinia Benchmark Suite.
 - Back-propagation
 - Breadth-First-Search
-- k-Nearest-Neighbors
+- k-Means
 - LU Decomposition
 - Particle Filter
 - PathFinder

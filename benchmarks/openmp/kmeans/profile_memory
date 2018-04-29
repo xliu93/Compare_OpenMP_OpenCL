@@ -1,0 +1,12 @@
+#!/bin/bash
+#INPUT=../../data/kmeans/inpuGen/1000000_34.txt
+NTHREADS=4
+
+for MYVAR in 1000 10000 100000 1000000
+do
+    #time ./kmeans_openmp/kmeans -n $NTHREADS -i $INPUT           # timing
+
+    INPUT=../../data/kmeans/inpuGen/$MYVAR'_'34.txt
+    valgrind ./kmeans_openmp/kmeans -n $NTHREADS -i $INPUT       # total heap use
+    #/usr/bin/time -v ./kmeans_openmp/kmeans -n $NTHREADS -i $INPUT # maximum resident size
+done

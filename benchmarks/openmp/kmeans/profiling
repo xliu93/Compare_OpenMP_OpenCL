@@ -1,0 +1,10 @@
+#/bin/bash
+INPUT=../../data/kmeans/inpuGen/1000000_34.txt
+NTHREADS=4
+
+for i in `seq 1 5`
+do
+    time ./kmeans_openmp/kmeans -n $NTHREADS -i $INPUT           # timing
+    #valgrind ./kmeans_openmp/kmeans -n $NTHREADS -i $INPUT       # total heap use
+    #/usr/bin/time -v ./kmeans_openmp/kmeans -n $NTHREADS -i $INPUT # maximum resident size
+done

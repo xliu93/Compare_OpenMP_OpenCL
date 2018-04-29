@@ -1,0 +1,10 @@
+#/bin/bash
+NTHREADS=4
+INPUT=../../data/bfs/graph16M.txt
+
+for i in `seq 1 5`
+do
+    time ./bfs $NTHREADS $INPUT           # timing
+    #valgrind ./bfs $NTHREADS $INPUT       # total heap use
+    #/usr/bin/time -v ./bfs $NTHREADS $INPUT # maximum resident size
+done
